@@ -1,0 +1,10 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/poker
+    username: pokerface
+    password: pokerface
+  flyway:
+    url: jdbc:postgresql://localhost:5432/poker
+    user: ${spring.r2dbc.username}
+    password: ${spring.r2dbc.password}
+    baseline-on-migrate: true
